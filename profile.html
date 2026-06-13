@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Developer Profile</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#2563eb,#06b6d4,#7c3aed);
+min-height:100vh;
+padding:30px;
+}
+/* Top Right Buttons */
+.top-buttons{
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 9999;
+}
+
+.nav-btn{
+    border: none;
+    padding: 12px 22px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+}
+
+.back-btn{
+    background: linear-gradient(135deg,#ff512f,#dd2476);
+}
+
+.home-btn{
+    background: linear-gradient(135deg,#00c853,#00e676);
+}
+
+.nav-btn:hover{
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+
+.nav-btn:active{
+    transform: scale(0.95);
+}
+
+/* Mobile Responsive */
+@media(max-width:768px){
+    .nav-btn{
+        padding:10px 16px;
+        font-size:14px;
+    }
+}
+
+.profile{
+max-width:900px;
+margin:auto;
+background:rgba(255,255,255,.12);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,.2);
+border-radius:25px;
+padding:30px;
+color:#fff;
+box-shadow:0 8px 30px rgba(0,0,0,.2);
+}
+
+.top{
+text-align:center;
+}
+
+.top img{
+width:160px;
+height:160px;
+border-radius:50%;
+border:5px solid #fff;
+object-fit:cover;
+}
+
+.top h1{
+margin-top:15px;
+font-size:32px;
+}
+
+.top p{
+opacity:.9;
+}
+
+.info{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+margin-top:30px;
+}
+
+.card{
+background:rgba(255,255,255,.1);
+padding:20px;
+border-radius:15px;
+}
+
+.card h3{
+margin-bottom:10px;
+color:#ffd700;
+}
+
+.social{
+text-align:center;
+margin-top:25px;
+}
+
+.social a{
+color:white;
+font-size:28px;
+margin:0 10px;
+text-decoration:none;
+}
+
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 25px;
+background:#fff;
+color:#2563eb;
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
+}
+
+.bio{
+line-height:1.8;
+}
+
+</style>
+</head>
+<body>
+
+<div class="profile">
+
+<div class="top">
+<img src="profile.jpg" alt="Developer Photo">
+
+<h1>Dipak Khillare</h1>
+<p>Web Developer | Certificate Portal Developer</p>
+</div>
+<!-- Top Right Buttons -->
+<div class="top-buttons">
+    <button class="nav-btn back-btn" onclick="history.back()">
+        ⬅ Back
+    </button>
+
+    <button class="nav-btn home-btn" onclick="window.location.href='index.html'">
+        🏠 Home
+    </button>
+</div>
+
+<div class="info">
+
+<div class="card">
+<h3>👤 Personal Information</h3>
+<p><b>Name:</b> Dipak Balasaheb Khillare</p>
+<p><b>Age:</b> 21 Years</p>
+<p><b>City:</b> At Dabha Tq Jintur Dist Parbhani, Maharashtra</p>
+<p><b>Nationality:</b> Indian</p>
+</div>
+
+<div class="card">
+<h3>🎓 Education</h3>
+<p><b>College:</b> Dr. Babasaheb Ambedkar Marathwada University Chhatrapati Sambhajinagar - 431004, Maharashtra,</p>
+<p><b>Course:</b>  MCA / Degree</p>
+<p><b>Year:</b> First Year</p>
+</div>
+
+<div class="card">
+<h3>💻 Skills</h3>
+<p>HTML</p>
+<p>CSS</p>
+<p>JavaScript</p>
+<p>Certificate Generator</p>
+<p>Web Design</p>
+<p>Web Developer</p>
+<p>Csc Center</p>
+<p>Php/python/C/C++/Cyber Scurity / All Languge Expert & Devloper</p>
+</div>
+
+<div class="card">
+<h3>📞 Contact</h3>
+<p>Email : Dipakhelp01gmail.com</p>
+<p>Mobile : +91 9359563098</p>
+<p>Website :https://dipakcsccenter.com/</p>
+</div>
+<div class="card">
+<h3>✔📃Certificate/Degree</h3>
+<p>Degree:- BCA </p>
+<p>Certificate : Csc Center/MACIT/App Developer/Cyber Security/Eithical Hacker/Language Devloper/ Computer Network....etc</p>
+<p>Experience :- 2 Year Teacher Expriance/ 3 Year Bank Csp Aeps/ Online Csc Center3 Year Experience </p>
+</div>
+
+</div>
+
+<div class="card" style="margin-top:20px;">
+<h3>📄 Full Bio Data</h3>
+
+<p class="bio">
+माझे नाव दीपक खिल्लारे आहे. मी वेब डेव्हलपर असून विविध प्रकारचे
+Certificate Generator, Affidavit Portal, Student Services,
+Farmer Services आणि Job Information Portal तयार करतो.
+मला HTML, CSS, JavaScript Certificate Generator
+
+Web Design
+
+Web Developer
+
+Csc Center
+
+Php/python/C/C++/Cyber Scurity / All Languge Expert & Devlope मध्ये काम करण्याचा अनुभव आहे.
+मी आधुनिक आणि आकर्षक वेबसाईट डिझाइन तयार करण्यास प्राधान्य देतो.
+</p>
+
+</div>
+
+<div class="social">
+
+<a href="https://www.facebook.com/share/193rBJCDwh/"><i class="fab fa-facebook"></i></a>
+<a href="https://www.instagram.com/dipak_multiservices_seva_kendr?igsh=MTIzeXYwYjQwaGVlMA=="><i class="fab fa-instagram"></i></a>
+<a href="https://youtube.com/@dipak_creation_358?si=w43Ep9F4U7D5pp-2"><i class="fab fa-youtube"></i></a>
+<a href="https://chat.whatsapp.com/LKuus9mJyv57dKnWHlNNKI"><i class="fab fa-whatsapp"></i></a>
+
+<br>
+
+
+<a href="index.html" class="btn">
+Home
+</a>
+</div>
+
+</div>
+
+</body>
+</html>

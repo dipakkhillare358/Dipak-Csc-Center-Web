@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🌾 Farmer Schemes Portal</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#0f5132,#198754,#20c997);
+padding:20px;
+min-height:100vh;
+}
+
+.header{
+text-align:center;
+color:white;
+margin-bottom:25px;
+}
+
+.header h1{
+font-size:40px;
+}
+
+.header p{
+font-size:18px;
+}
+
+.profile{
+max-width:1200px;
+margin:auto;
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(15px);
+padding:25px;
+border-radius:20px;
+text-align:center;
+color:white;
+margin-bottom:25px;
+}
+
+.profile img{
+width:120px;
+height:120px;
+border-radius:50%;
+border:4px solid white;
+margin-bottom:15px;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+}
+
+.card{
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(15px);
+padding:25px;
+border-radius:20px;
+margin-bottom:20px;
+color:white;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.card h2{
+color:#FFD700;
+margin-bottom:10px;
+}
+
+.card p{
+line-height:1.7;
+margin-bottom:15px;
+}
+
+.btns{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+}
+
+.apply{
+background:#ffc107;
+color:black;
+padding:12px 20px;
+text-decoration:none;
+border-radius:10px;
+font-weight:bold;
+}
+
+.contact{
+background:#25D366;
+color:white;
+padding:12px 20px;
+text-decoration:none;
+border-radius:10px;
+font-weight:bold;
+}
+
+footer{
+text-align:center;
+margin-top:30px;
+color:white;
+}
+/* Top Right Buttons */
+.top-buttons{
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 9999;
+}
+
+.nav-btn{
+    border: none;
+    padding: 12px 22px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+}
+
+.back-btn{
+    background: linear-gradient(135deg,#ff512f,#dd2476);
+}
+
+.home-btn{
+    background: linear-gradient(135deg,#00c853,#00e676);
+}
+
+.nav-btn:hover{
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+
+.nav-btn:active{
+    transform: scale(0.95);
+}
+
+</style>
+
+</head>
+<body>
+<!-- Top Right Buttons -->
+<div class="top-buttons">
+    <button class="nav-btn back-btn" onclick="history.back()">
+        ⬅ Back
+    </button>
+
+    <button class="nav-btn home-btn" onclick="window.location.href='index.html'">
+        🏠 Home
+    </button>
+</div>
+<div class="header">
+<h1>🌾 Farmer Schemes Portal</h1>
+<p>Dipak CSC Center - सर्व शेतकरी योजना एकाच ठिकाणी</p>
+</div>
+
+<div class="profile">
+<img src="logo.png">
+<h2>Dipak CSC Center</h2>
+<p>शेतकरी योजना | अनुदान | पीक विमा | कृषी सेवा</p>
+</div>
+
+<div class="container">
+
+<div class="card">
+<h2>🚜 PM Kisan Samman Nidhi</h2>
+<p>शेतकऱ्यांना दरवर्षी ₹6000 आर्थिक सहाय्य.</p>
+<div class="btns">
+<a href="#" class="apply">Apply Now</a>
+<a href="https://wa.me/919359563098" class="contact">
+Dipak CSC Center Contact
+</a>
+</div>
+</div>
+
+<div class="card">
+<h2>🌱 नमो शेतकरी महासन्मान निधी</h2>
+<p>महाराष्ट्र शासनाकडून अतिरिक्त आर्थिक मदत.</p>
+<div class="btns">
+<a href="#" class="apply">Apply Now</a>
+<a href="https://wa.me/919359563098" class="contact">
+Dipak CSC Center Contact
+</a>
+</div>
+</div>
+
+<div class="card">
+<h2>☔ PM Fasal Bima Yojana</h2>
+<p>पीक नुकसानीसाठी विमा संरक्षण.</p>
+<div class="btns">
+<a href="#" class="apply">Apply Now</a>
+<a href="https://wa.me/919359563098" class="contact">
+Dipak CSC Center Contact
+</a>
+</div>
+</div>
+
+<div class="card">
+<h2>💧 कृषी सिंचन योजना</h2>
+<p>ठिबक व तुषार सिंचनासाठी अनुदान.</p>
+<div class="btns">
+<a href="#" class="apply">Apply Now</a>
+<a href="https://wa.me/919359563098" class="contact">
+Dipak CSC Center Contact
+</a>
+</div>
+</div>
+
+<div class="card">
+<h2>🚜 ट्रॅक्टर अनुदान योजना</h2>
+<p>नवीन ट्रॅक्टर खरेदीसाठी शासन अनुदान.</p>
+<div class="btns">
+<a href="#" class="apply">Apply Now</a>
+<a href="https://wa.me/919359563098" class="contact">
+Dipak CSC Center Contact
+</a>
+</div>
+</div>
+
+<div class="card">
+<h2>🌾 MahaDBT Farmer Portal</h2>
+<p>सर्व कृषी योजनांसाठी ऑनलाइन अर्ज.</p>
+<div class="btns">
+<a href="#" class="apply">Apply Now</a>
+<a href="https://wa.me/919359563098" class="contact">
+Dipak CSC Center Contact
+</a>
+</div>
+</div>
+
+</div>
+
+<footer>
+<h3>© 2026 Dipak CSC Center</h3>
+<p>Farmer Welfare & Government Schemes Portal</p>
+</footer>
+
+</body>
+</html>

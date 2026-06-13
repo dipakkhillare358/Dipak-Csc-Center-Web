@@ -1,0 +1,269 @@
+
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>शपथपत्र सेवा केंद्र</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#2563eb,#06b6d4,#7c3aed);
+min-height:100vh;
+color:white;
+}
+
+header{
+padding:20px;
+text-align:center;
+background:rgba(255,255,255,.1);
+backdrop-filter:blur(15px);
+}
+
+header h1{
+font-size:35px;
+}
+
+.info-box{
+width:90%;
+margin:20px auto;
+background:#dff7ea;
+color:#2d5f49;
+padding:25px;
+border-radius:15px;
+line-height:1.8;
+}
+
+.top-bar{
+width:90%;
+margin:20px auto;
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.service-select,
+.search-box{
+flex:1;
+padding:12px;
+border:none;
+border-radius:10px;
+font-size:16px;
+}
+
+.services{
+width:90%;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+padding-bottom:30px;
+}
+
+.card{
+background:rgba(255,255,255,.1);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,.2);
+padding:25px;
+border-radius:20px;
+text-align:center;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card i{
+font-size:45px;
+margin-bottom:15px;
+}
+
+.card h3{
+margin-bottom:15px;
+}
+
+.card a{
+display:inline-block;
+padding:10px 20px;
+background:white;
+color:black;
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
+}
+
+footer{
+text-align:center;
+padding:20px;
+}
+/* Top Right Buttons */
+.top-buttons{
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 9999;
+}
+
+.nav-btn{
+    border: none;
+    padding: 12px 22px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+}
+
+.back-btn{
+    background: linear-gradient(135deg,#ff512f,#dd2476);
+}
+
+.home-btn{
+    background: linear-gradient(135deg,#00c853,#00e676);
+}
+
+.nav-btn:hover{
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+
+.nav-btn:active{
+    transform: scale(0.95);
+}
+
+/* Mobile Responsive */
+@media(max-width:768px){
+    .nav-btn{
+        padding:10px 16px;
+        font-size:14px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>📄 शपथपत्र सेवा केंद्र</h1>
+<!-- Top Right Buttons -->
+<div class="top-buttons">
+    <button class="nav-btn back-btn" onclick="history.back()">
+        ⬅ Back
+    </button>
+
+    <button class="nav-btn home-btn" onclick="window.location.href='index.html'">
+        🏠 Home
+    </button>
+</div>
+</header>
+
+<div class="info-box">
+<h2>📢 स्वाधार योजना माहिती</h2>
+<p>
+स्वाधार योजना ही महाराष्ट्र शासनामार्फत राबविण्यात येणारी योजना आहे.
+या योजनेद्वारे विद्यार्थ्यांना शिक्षणासाठी आर्थिक सहाय्य दिले जाते.
+अर्ज करण्यापूर्वी सर्व आवश्यक कागदपत्रे तयार ठेवावीत.
+</p>
+</div>
+
+<div class="top-bar">
+
+<select class="service-select">
+<option>सेवा निवडा</option>
+<option>सर्व शपथपत्र</option>
+<option>स्थानिक रहिवासी नसल्याबाबत</option>
+<option>उत्पन्न शपथपत्र</option>
+<option>गॅप सर्टिफिकेट</option>
+<option>अविवाहित शपथपत्र</option>
+<option>नाव दुरुस्ती शपथपत्र</option>
+</select>
+
+<input type="text" class="search-box"
+placeholder="शपथपत्र शोधा...">
+
+</div>
+
+<div class="services">
+
+<div class="card">
+<i class="fas fa-file-signature"></i>
+<h3>स्थानिक रहिवासी नसल्याबाबत शपथपत्र</h3>
+<a href="Sthanikrahivashinot-declaration.html">Open</a>
+</div>
+
+<div class="card">
+<i class="fas fa-file-signature"></i>
+<h3> -: भाडे करारनामा :- शपथपत्र</h3>
+<a href="RentAgreement.html">Open</a>
+</div>
+
+<div class="card">
+<i class="fas fa-file-signature"></i>
+<h3>गॅप सर्टिफिकेट शपथपत्र</h3>
+<a href="#">Open</a>
+</div>
+
+<div class="card">
+<i class="fas fa-file-signature"></i>
+<h3>शासकीय वस्तीगृहात राहत नसल्याबाबतचे शपथपत्र</h3>
+<a href="Shaskiyvastigrunotprsentdecl.html">Open</a>
+</div>
+
+<div class="card">
+<i class="fas fa-file-signature"></i>
+<h3>विध्यावेतन शपतपत्र</h3>
+<a href="vidhyavetn-declaration.html">Open</a>
+</div>
+
+<div class="card">
+<i class="fas fa-file-signature"></i>
+<h3>नाव दुरुस्ती शपथपत्र</h3>
+<a href="#">Open</a>
+</div>
+
+<div class="card">
+<i class="fas fa-file-signature"></i>
+<h3>जन्मतारीख दुरुस्ती शपथपत्र</h3>
+<a href="#">Open</a>
+</div>
+
+<div class="card">
+<i class="fas fa-file-signature"></i>
+<h3>वारस प्रमाणपत्र शपथपत्र</h3>
+<a href="#">Open</a>
+</div>
+
+<div class="card">
+<i class="fas fa-file-signature"></i>
+<h3>संमतीपत्र</h3>
+<a href="#">Open</a>
+</div>
+
+<div class="card">
+<i class="fas fa-file-signature"></i>
+<h3>टी.सी. अर्ज</h3>
+<a href="Tc.html">Open</a>
+</div>
+
+</div>
+
+<footer>
+© 2026 Developer By Dipak Khillare
+</footer>
+
+</body>
+</html>

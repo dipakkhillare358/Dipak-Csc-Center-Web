@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Student Dashboard</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#0f172a,#1e3a8a);
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.dashboard{
+width:90%;
+max-width:1000px;
+}
+
+.header{
+text-align:center;
+color:white;
+margin-bottom:40px;
+}
+
+.header h1{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.header p{
+font-size:18px;
+opacity:0.9;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+.card{
+background:rgba(255,255,255,0.1);
+backdrop-filter:blur(15px);
+border-radius:25px;
+padding:40px;
+text-align:center;
+color:white;
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
+transition:0.4s;
+border:1px solid rgba(255,255,255,0.2);
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card i{
+font-size:70px;
+margin-bottom:20px;
+color:#ffd700;
+}
+
+.card h2{
+margin-bottom:15px;
+font-size:28px;
+}
+
+.card p{
+font-size:16px;
+line-height:1.6;
+margin-bottom:25px;
+}
+
+.btn{
+display:inline-block;
+padding:12px 25px;
+background:#ffd700;
+color:#000;
+font-weight:bold;
+text-decoration:none;
+border-radius:30px;
+transition:0.3s;
+}
+
+.btn:hover{
+background:white;
+}
+
+.footer{
+text-align:center;
+color:white;
+margin-top:40px;
+font-size:15px;
+}
+/* Top Right Buttons */
+.top-buttons{
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 9999;
+}
+
+.nav-btn{
+    border: none;
+    padding: 12px 22px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+}
+
+.back-btn{
+    background: linear-gradient(135deg,#ff512f,#dd2476);
+}
+
+.home-btn{
+    background: linear-gradient(135deg,#00c853,#00e676);
+}
+
+.nav-btn:hover{
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+
+.nav-btn:active{
+    transform: scale(0.95);
+}
+
+
+</style>
+</head>
+<body>
+<!-- Top Right Buttons -->
+<div class="top-buttons">
+    <button class="nav-btn back-btn" onclick="history.back()">
+        ⬅ Back
+    </button>
+
+    <button class="nav-btn home-btn" onclick="window.location.href='index.html'">
+        🏠 Home
+    </button>
+</div>
+
+<div class="dashboard">
+
+<div class="header">
+<h1>🎓 Student Dashboard</h1>
+<p>All Courses & Government Schemes Information Portal</p>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<i class="fas fa-graduation-cap"></i>
+<h2>Student Courses</h2>
+<p>
+10th, 12th, Diploma, ITI,
+Graduation, Post Graduation,
+Professional Courses,
+Computer Courses Information
+</p>
+
+<a href="StudentCourse.html" class="btn">
+View Courses
+</a>
+</div>
+
+<div class="card">
+<i class="fas fa-landmark"></i>
+<h2>Student Schemes</h2>
+<p>
+Scholarship Schemes,
+Swadhar Yojana,
+Mahadbt Schemes,
+Government Student Benefits
+</p>
+
+<a href="StudentScheme.html" class="btn">
+View Schemes
+</a>
+</div>
+
+</div>
+
+<div class="footer">
+© 2026 Student Portal | Developed By Dipak Khillare
+</div>
+
+</div>
+
+</body>
+</html>

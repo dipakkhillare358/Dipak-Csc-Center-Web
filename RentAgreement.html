@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>-: भाडे करारनामा :-  शपथपत्र Certificate Generator</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#0052a3;
+padding:15px;
+overflow-x:hidden;
+}
+
+/* MAIN */
+
+.container{
+max-width:1400px;
+margin:auto;
+display:grid;
+grid-template-columns:420px 1fr;
+gap:20px;
+align-items:start;
+}
+
+/* FORM */
+
+.form-box{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+position:sticky;
+top:15px;
+}
+
+.form-box h1{
+text-align:center;
+font-size:30px;
+margin-bottom:25px;
+color:#0b2f6b;
+}
+
+.input-box{
+margin-bottom:18px;
+}
+
+.input-box label{
+display:block;
+font-size:17px;
+font-weight:bold;
+margin-bottom:7px;
+color:#222;
+}
+
+.input-box input{
+width:100%;
+padding:14px;
+border:2px solid #ddd;
+border-radius:12px;
+font-size:17px;
+outline:none;
+transition:0.3s;
+}
+
+.input-box input:focus{
+border-color:#0052a3;
+}
+
+/* BUTTON */
+
+.btn{
+width:100%;
+padding:16px;
+border:none;
+border-radius:50px;
+font-size:20px;
+font-weight:bold;
+color:white;
+cursor:pointer;
+margin-top:15px;
+transition:0.3s;
+}
+
+.generate-btn{
+background:linear-gradient(45deg,#ff416c,#ff4b2b);
+}
+
+.download-btn{
+background:linear-gradient(45deg,#11998e,#38ef7d);
+}
+
+.btn:hover{
+transform:scale(1.03);
+}
+
+/* CERTIFICATE */
+
+
+.certificate{
+width:190mm;
+padding-top:60mm;
+padding-left:22mm;
+padding-right:22mm;
+padding-bottom:40mm;
+}
+
+.cert-body{
+font-size:18px;
+line-height:2.2;
+}
+
+.certificate{
+width:190mm;
+min-height:270mm;
+background:white;
+padding-top:40mm;      /* वर blank जागा */
+padding-right:18mm;
+padding-bottom:50mm;   /* खाली blank जागा */
+padding-left:18mm;
+margin:0 auto;
+overflow:hidden;
+position:relative;
+box-shadow:0 10px 40px rgba(0,0,0,0.2);
+}
+/* TITLE */
+
+.cert-title{
+text-align:center;
+font-size:20px;
+font-weight:bold;
+line-height:1.5;
+margin-bottom:20px;
+color:#111;
+border-bottom:2px solid #000; /* Line */
+padding-bottom:10px;
+}
+
+.cert-sub{
+text-align:center;
+font-size:14px;
+margin-bottom:20px;
+color:#444;
+}
+
+/* BODY TEXT */
+
+.cert-text{
+font-size:16px;
+line-height:2.1;
+color:#111;
+text-align:justify;
+}
+
+.bold{
+font-weight:bold;
+}
+
+/* SIGN */
+
+
+.signature-section{
+    display:flex;
+    justify-content:space-between;
+    margin-top:15px;
+    width:100%;
+}
+
+.sign-box{
+    width:40%;
+    text-align:center;
+    line-height:2;
+    font-size:18px;
+}
+.bottom{
+margin-top:40px;
+font-size:16px;
+line-height:2;
+}
+
+/* FOOTER */
+
+.footer-text{
+position:static;
+margin-top:20px;
+text-align:center;
+font-size:13px;
+}
+
+/* MOBILE */
+
+@media(max-width:1200px){
+
+.container{
+grid-template-columns:1fr;
+}
+
+.form-box{
+position:relative;
+top:0;
+}
+
+.certificate{
+width:100%;
+height:auto;
+min-height:297mm;
+}
+
+}
+
+/* PRINT */
+
+@page{
+size:A4;
+margin:0;
+}
+
+@media print{
+
+html,body{
+width:210mm;
+height:297mm;
+margin:0;
+padding:0;
+overflow:hidden;
+background:white;
+}
+
+.cert-body{
+font-size:17px;
+line-height:2.3;
+text-align:justify;
+word-spacing:2px;
+letter-spacing:0.3px;
+}
+
+
+.bold{
+font-weight:bold;
+padding:0 3px;
+}
+
+.certificate{
+width:210mm;
+min-height:297mm;
+background:white;
+padding:20mm;
+margin:0 auto;
+box-shadow:none;
+font-size:18px;
+}
+
+}
+/* Top Right Buttons */
+.top-buttons{
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 9999;
+}
+
+.nav-btn{
+    border: none;
+    padding: 12px 22px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+}
+
+.back-btn{
+    background: linear-gradient(135deg,#ff512f,#dd2476);
+}
+
+.home-btn{
+    background: linear-gradient(135deg,#00c853,#00e676);
+}
+
+.nav-btn:hover{
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+
+.nav-btn:active{
+    transform: scale(0.95);
+}
+
+/* Mobile Responsive */
+@media(max-width:768px){
+    .nav-btn{
+        padding:10px 16px;
+        font-size:14px;
+    }
+}
+
+
+
+</style>
+</head>
+
+<body>
+<!-- Top Right Buttons -->
+<div class="top-buttons">
+    <button class="nav-btn back-btn" onclick="history.back()">
+        ⬅ Back
+    </button>
+
+    <button class="nav-btn home-btn" onclick="window.location.href='index.html'">
+        🏠 Home
+    </button>
+</div>
+
+<div class="container">
+
+<!-- FORM -->
+
+<div class="form-box">
+
+<h1>📄 -: भाडे करारनामा :-  शपथपत्र</h1>
+<h2>कृपया मराठी मध्ये टाइप करा.</h2>
+<br><br>
+
+<div class="input-box">
+<label>विद्यार्थ्याचे नाव</label>
+<input type="text" id="name"
+placeholder="पूर्ण नाव टाका">
+</div>
+
+<div class="input-box">
+<label>वय</label>
+<input type="text" id="age"
+placeholder="वय टाका">
+</div>
+
+<div class="input-box">
+<label> विध्यार्थी चा पता</label>
+<input type="text" id="address"
+placeholder="गाव, तालुका आणी जिल्हा टाका">
+</div>
+
+<div class="input-box">
+<label>घरमालकाचे पूर्ण नाव </label>
+<input type="text" id="owner"
+placeholder="घरमालकाचे पूर्ण नाव टाका">
+</div>
+
+<div class="input-box">
+<label>घरमालकाच वय</label>
+<input type="text" id="age1"
+placeholder="घरमालकाच वय टाका">
+</div>
+
+<div class="input-box">
+<label>घरमालका.चा पत्ता</label>
+<input type="text" id="rentplace"
+placeholder="घरमालकाचा पत्ता टाका">
+</div>
+
+<div class="input-box">
+<label>नगर परिषद /नगर पालिका नाव</label>
+<input type="text" id="nagarparishad"
+placeholder="तालुकाचे/किव्हा जिल्हाचे नाव टाका">
+</div>
+
+<div class="input-box">
+<label>घर क्रमांक</label>
+<input type="text" id="houseno"
+placeholder="घर क्रमांक:-10/20  100">
+</div>
+
+<div class="input-box">
+<label>दिनाक</label>
+<input type="text" id="date"
+placeholder="आजची तारीखटाका DD/MM/YYYY">
+</div>
+
+
+<button class="btn generate-btn"
+onclick="generateCertificate()">
+
+✨ Generate Certificate
+
+</button>
+
+<button class="btn download-btn"
+onclick="downloadPDF()">
+
+⬇ Download PDF
+
+</button>
+
+</div>
+
+<!-- CERTIFICATE -->
+
+<div class="certificate-wrapper">
+
+<div class="certificate" id="certificate">
+
+<div class="cert-title">
+
+
+
+
+
+
+
+-: भाडे करारनामा :-
+<br><br>
+
+</div>
+
+
+
+<div class="cert-body">
+
+<span class="bold">
+भाडे करारनामालिहून घेणार :-
+</span>
+
+&nbsp; &nbsp;<span class="bold" id="showName">
+विद्यार्थी नाव
+</span> (भाडेकरू)<br><span style="display:inline-block; width:2.5in;"></span> 
+वय
+<span class="bold" id="showAge">
+वय टाका
+</span>वर्ष धंदा शिक्षण
+
+<br><span style="display:inline-block; width:2.5in;"></span> 
+ रा.
+ 
+<span class="bold" id="showAddress">
+विध्यार्थी चा  पता  <span style="display:inline-block; width:2.5in;"></span> 
+</span><br>
+
+
+<span class="bold">
+भाडे करारनामालिहून देणार :- 
+</span> 
+
+ &nbsp; &nbsp;<span class="bold" id="showOwner">
+घर मालकाचे नाव पूर्ण टाका 
+</span> (घर मालक)
+
+ <span style="display:inline-block; width:2.5in;"></span>
+वय
+<span class="bold" id="showAge1">
+वय टाका
+</span> वर्ष
+
+रा.
+<span class="bold" id="showRentplace">
+घरमालकाचा पत्ता  <span style="display:inline-block; width:2.5in;"></span> 
+</span><br>
+
+<span style="margin-left:60px;display:inline-block;">
+कारणे भाडे करारनामा लिहून देत आहे. माझ्या मालकी व ताब्याची घर जागा 
+</span>
+
+नगर परिषद<span class="bold" id="showNagarparishad">
+नगर परिषद /नगर पालिका नाव
+</span>
+
+ येथील घर क्र.
+<span class="bold" id="showHouseno">
+घर क्र.
+</span>
+ मधील 01 खोली संडास बाथरुमसह मी तुम्हास
+
+प्रति महिना 3,000/- तीन हजार रुपये प्रति महिना प्रमाणे एक वर्षासाठी दिनांक :-
+
+01/08/2026 पासून 01/07/2027 पर्यंत भाड्याने दिली आहे. सदर भाडे करारनामा मी
+
+डॉ. बाबासाहेब आंबेडकर स्वाधार योजनेसाठी दिला आहे.<br>
+
+<span style="margin-left:60px;display:inline-block;">
+करीता हे भाडे करारनामा लिहून दिले आहे. दिनांक :-
+<span class="bold" id="showDate">
+दिनांक 
+</span>
+</span>
+
+<div class="signature-section">
+
+    <div class="sign-box">
+        <b>भाडे करारनामाहून घेणार :-</b>
+        <br><br>
+        <b id="showName1">विद्यार्थ्याचे नाव</b>
+        <br>
+       (भाडेकरू)
+    </div>
+
+    <div class="sign-box">
+        <b>भाडे करारनामाहून देणार :-</b>
+        <br><br>
+        <b id="showOwner1">घर मालकाचे नाव</b><br>
+       
+                (घर मालक)
+    </div>
+
+</div>
+<br>
+   &nbsp; &nbsp;&nbsp; &nbsp;  साक्षीदार
+<br>
+1).......................................... <span style="display:inline-block; width:1in;"></span> ---------------
+<br>
+2)..........................................
+
+<span style="display:inline-block; width:1in;"></span> ---------------
+<div class="footer-text">
+
+<a href="https://dipakcsccenter.com/" class="doc-link">
+Provided By Dips
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+/* GENERATE CERTIFICATE */
+
+function generateCertificate(){
+
+
+
+document.getElementById("showName").innerHTML =
+document.getElementById("name").value;
+
+
+document.getElementById("showName1").innerHTML =
+document.getElementById("name").value;
+
+document.getElementById("showAge").innerHTML =
+document.getElementById("age").value;
+
+document.getElementById("showAddress").innerHTML =
+document.getElementById("address").value;
+
+
+
+
+document.getElementById("showOwner").innerHTML =
+document.getElementById("owner").value;
+document.getElementById("showOwner1").innerHTML =
+document.getElementById("owner").value;
+
+document.getElementById("showAge1").innerHTML =
+document.getElementById("age1").value;
+
+document.getElementById("showRentplace").innerHTML =
+document.getElementById("rentplace").value;
+
+
+document.getElementById("showNagarparishad").innerHTML =
+document.getElementById("nagarparishad").value;
+
+document.getElementById("showHouseno").innerHTML =
+document.getElementById("houseno").value;
+
+document.getElementById("showDate").innerHTML =
+document.getElementById("date").value;
+
+
+
+
+}
+
+/* DOWNLOAD PDF */
+
+
+function downloadPDF(){
+
+const element =
+document.getElementById("certificate");
+
+const options = {
+
+margin:0,
+
+filename:'Swadhar-Certificate.pdf',
+
+image:{
+type:'jpeg',
+quality:1
+},
+
+html2canvas:{
+scale:2,
+scrollX:0,
+scrollY:0
+},
+
+jsPDF:{
+unit:'mm',
+format:'a4',
+orientation:'portrait'
+}
+
+};
+
+html2pdf()
+.set(options)
+.from(element)
+.save();
+
+}
+</script>
+
+</body>
+</html>

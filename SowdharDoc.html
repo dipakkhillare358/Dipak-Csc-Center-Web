@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>स्वाधार योजना</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#eef2f7;
+}
+
+/* TOP HEADER */
+
+.top-banner{
+width:100%;
+background:linear-gradient(90deg,#0052a3,#2f80ed);
+padding:18px;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+position:relative;
+overflow:hidden;
+}
+
+.top-banner img{
+width:70px;
+margin-right:15px;
+}
+
+.top-text h1{
+font-size:30px;
+font-weight:bold;
+}
+
+.top-text p{
+font-size:15px;
+opacity:0.9;
+}
+
+/* MAIN CARD */
+
+.main-box{
+width:95%;
+max-width:950px;
+margin:40px auto;
+background:white;
+border-radius:25px;
+padding:40px;
+box-shadow:0 10px 40px rgba(0,0,0,0.15);
+position:relative;
+overflow:hidden;
+animation:fade 1s ease;
+}
+
+/* WATERMARK */
+
+.watermark{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%) rotate(-35deg);
+font-size:90px;
+color:rgba(0,82,163,0.08);
+font-weight:bold;
+pointer-events:none;
+white-space:nowrap;
+}
+
+/* LOGO */
+
+.logo{
+text-align:center;
+margin-bottom:20px;
+}
+
+.logo img{
+width:90px;
+}
+
+/* TITLE */
+
+.title{
+text-align:center;
+margin-bottom:30px;
+}
+
+.title h1{
+font-size:52px;
+color:#0b2f6b;
+margin-bottom:10px;
+font-weight:bold;
+}
+
+.title span{
+color:red;
+}
+
+.title p{
+font-size:22px;
+margin-top:15px;
+color:#333;
+}
+
+/* LIST */
+
+.list-box{
+margin-top:20px;
+}
+
+.list-item{
+display:flex;
+align-items:flex-start;
+background:#f8f9ff;
+margin-bottom:18px;
+padding:18px;
+border-radius:15px;
+transition:0.3s;
+border-left:5px solid #0052a3;
+}
+
+.list-item:hover{
+transform:translateX(8px);
+background:#edf3ff;
+}
+
+.number{
+min-width:45px;
+height:45px;
+background:linear-gradient(45deg,#0052a3,#2f80ed);
+color:white;
+font-size:22px;
+font-weight:bold;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+margin-right:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.text{
+font-size:21px;
+line-height:1.7;
+color:#222;
+}
+
+/* NOTE */
+
+.note{
+margin-top:35px;
+background:#fff3cd;
+padding:22px;
+border-radius:15px;
+border-left:6px solid orange;
+font-size:19px;
+line-height:1.8;
+}
+
+/* BUTTON */
+
+.btn-area{
+text-align:center;
+margin-top:40px;
+}
+
+.btn{
+padding:16px 40px;
+font-size:22px;
+border:none;
+border-radius:50px;
+background:linear-gradient(45deg,#ff416c,#ff4b2b);
+color:white;
+cursor:pointer;
+transition:0.3s;
+box-shadow:0 5px 20px rgba(0,0,0,0.2);
+}
+
+.btn:hover{
+transform:scale(1.08);
+}
+
+/* ANIMATION */
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.top-text h1{
+font-size:20px;
+}
+
+.main-box{
+padding:20px;
+}
+
+.title h1{
+font-size:34px;
+}
+
+.title p{
+font-size:18px;
+}
+
+.text{
+font-size:18px;
+}
+
+.watermark{
+font-size:55px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- TOP HEADER -->
+
+<div class="top-banner">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Emblem_of_India.svg">
+
+<div class="top-text">
+<h1>Social Justice & Special Assistance Department</h1>
+<p>Government of Maharashtra</p>
+</div>
+
+</div>
+
+<!-- MAIN CONTENT -->
+
+<div class="main-box">
+
+<div class="watermark">
+Developer By Dipak
+</div>
+
+<div class="logo">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Emblem_of_India.svg">
+
+</div>
+
+<div class="title">
+
+<h1>
+भारतरत्न डॉ. बाबासाहेब आंबेडकर
+<br>
+<span>स्वाधार योजना</span>
+</h1>
+
+<p>
+डॉ. बाबासाहेब आंबेडकर स्वाधार योजना स्कॉलरशिप साठी लागणारी कागदपत्रे
+</p>
+
+</div>
+
+<!-- LIST -->
+
+<div class="list-box">
+
+<div class="list-item">
+<div class="number">1</div>
+<div class="text">जातीचा दाखला</div>
+</div>
+
+<div class="list-item">
+<div class="number">2</div>
+<div class="text">रहिवाशी / डोमेसाईल प्रमाणपत्र</div>
+</div>
+
+<div class="list-item">
+<div class="number">3</div>
+<div class="text">उत्पन्न प्रमाणपत्र (वडिलांचे)</div>
+</div>
+
+<div class="list-item">
+<div class="number">4</div>
+<div class="text">अपंगत्व प्रमाणपत्र (लागू असल्यास)</div>
+</div>
+
+<div class="list-item">
+<div class="number">5</div>
+<div class="text">गुणपत्रिका आणि शाळा सोडल्याचा दाखला</div>
+</div>
+
+<div class="list-item">
+<div class="number">6</div>
+<div class="text">शैक्षणिक संस्थेचे बोनाफाईड</div>
+</div>
+
+<div class="list-item">
+<div class="number">7</div>
+<div class="text">GAP Certificate (लागू असल्यास)</div>
+</div>
+
+<a href="RentAgreement.html" class="doc-link">
+<div class="list-item">
+<div class="number">8</div>
+<div class="text">भाडे करारनामा (नोटरी केलेला)</div>
+</div>
+</a>
+
+<div class="list-item">
+<div class="number">9</div>
+<div class="text">
+महाविद्यालयीन विद्यार्थीनी 5 किमी अंतराच्या बाहेर असल्याचे प्रमाणपत्र
+</div>
+</div>
+
+<div class="list-item">
+<div class="number">10</div>
+<div class="text">
+उपस्थिती प्रमाणपत्र (75% पेक्षा जास्त उपस्थिती आवश्यक)
+</div>
+</div>
+
+<a href="Shaskiyvastigrunotprsentdecl.html" class="doc-link">
+<div class="list-item">
+<div class="number">11</div>
+<div class="text">
+शासकीय वसतिगृहात राहत नसल्याबाबत शपथपत्र
+</div>
+</div>
+</a>
+  
+<a href="vidhyavetn-declaration.html" class="doc-link">
+<div class="list-item">
+<div class="number">12</div>
+<div class="text">
+विद्यावेतन घेत नसल्याचे शपथपत्र
+</div>
+</div>
+</a>
+
+<a href="Sthanikrahivashinot-declaration.html" class="doc-link">
+<div class="list-item">
+<div class="number">13</div>
+<div class="text">
+स्थानिक रहिवाशी नसल्याबाबत शपथपत्र
+</div>
+</div>
+</a>
+<div class="list-item">
+<div class="number">14</div>
+<div class="text">
+स्वयंघोषणापत्र / नोकरी किंवा व्यवसाय करत नसल्याचे प्रमाणपत्र
+</div>
+</div>
+
+</div>
+
+<!-- NOTE -->
+
+<div class="note">
+
+<b>टीप :</b>
+वरील सर्व शपथपत्र पिवळ्या कागदावर टाईप करून नोटरी करणे आवश्यक आहे.
+
+</div>
+
+<!-- BUTTON -->
+
+<div class="btn-area">
+
+<button class="btn"
+onclick="window.location.href='index.html'">
+
+🏠 Home Page
+
+</button>
+
+</div>
+
+</div>
+
+</body>
+</html>

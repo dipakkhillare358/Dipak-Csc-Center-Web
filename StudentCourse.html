@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Course Eligibility Portal</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f4f7fc;
+}
+
+header{
+background:linear-gradient(135deg,#0066ff,#00c6ff);
+color:white;
+padding:20px;
+text-align:center;
+}
+
+header h1{
+font-size:35px;
+}
+
+.search-box{
+text-align:center;
+margin:20px;
+}
+
+.search-box input{
+width:80%;
+max-width:600px;
+padding:12px;
+border-radius:30px;
+border:2px solid #0066ff;
+font-size:16px;
+}
+
+.container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+padding:20px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card h2{
+color:#0066ff;
+margin-bottom:10px;
+}
+
+.card p{
+line-height:1.7;
+}
+
+.btn{
+display:inline-block;
+margin-top:15px;
+padding:10px 18px;
+background:#0066ff;
+color:white;
+text-decoration:none;
+border-radius:25px;
+}
+
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:30px;
+}
+/* Top Right Buttons */
+.top-buttons{
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 9999;
+}
+
+.nav-btn{
+    border: none;
+    padding: 12px 22px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+}
+
+.back-btn{
+    background: linear-gradient(135deg,#ff512f,#dd2476);
+}
+
+.home-btn{
+    background: linear-gradient(135deg,#00c853,#00e676);
+}
+
+.nav-btn:hover{
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+
+.nav-btn:active{
+    transform: scale(0.95);
+}
+
+</style>
+</head>
+<body>
+<!-- Top Right Buttons -->
+<div class="top-buttons">
+    <button class="nav-btn back-btn" onclick="history.back()">
+        ⬅ Back
+    </button>
+
+    <button class="nav-btn home-btn" onclick="window.location.href='index.html'">
+        🏠 Home
+    </button>
+</div>
+
+<header>
+<h1>🎓 Student Course Eligibility Portal</h1>
+<p>All Courses Eligibility, Duration & Career Information</p>
+</header>
+
+<div class="search-box">
+<input type="text" id="searchInput"
+placeholder="Search Course...">
+</div>
+
+<div class="container" id="courseContainer">
+
+<div class="card">
+<h2>B.Tech Engineering</h2>
+<p><b>Eligibility:</b> 12th PCM</p>
+<p><b>Duration:</b> 4 Years</p>
+<p><b>Exam:</b> JEE / CET</p>
+<p><b>Career:</b> Engineer, Software Developer</p>
+</div>
+
+<div class="card">
+<h2>MBBS</h2>
+<p><b>Eligibility:</b> 12th PCB</p>
+<p><b>Duration:</b> 5.5 Years</p>
+<p><b>Exam:</b> NEET</p>
+<p><b>Career:</b> Doctor</p>
+</div>
+
+<div class="card">
+<h2>BCA</h2>
+<p><b>Eligibility:</b> 12th Pass</p>
+<p><b>Duration:</b> 3 Years</p>
+<p><b>Exam:</b> Merit/CET</p>
+<p><b>Career:</b> Software Developer</p>
+</div>
+
+<div class="card">
+<h2>BBA</h2>
+<p><b>Eligibility:</b> 12th Pass</p>
+<p><b>Duration:</b> 3 Years</p>
+<p><b>Career:</b> Manager, Entrepreneur</p>
+</div>
+
+<div class="card">
+<h2>LLB</h2>
+<p><b>Eligibility:</b> Graduation</p>
+<p><b>Duration:</b> 3 Years</p>
+<p><b>Exam:</b> CLAT</p>
+<p><b>Career:</b> Advocate</p>
+</div>
+
+<div class="card">
+<h2>B.Pharm</h2>
+<p><b>Eligibility:</b> 12th PCB/PCM</p>
+<p><b>Duration:</b> 4 Years</p>
+<p><b>Career:</b> Pharmacist</p>
+</div>
+
+<div class="card">
+<h2>Diploma Engineering</h2>
+<p><b>Eligibility:</b> 10th Pass</p>
+<p><b>Duration:</b> 3 Years</p>
+<p><b>Career:</b> Junior Engineer</p>
+</div>
+
+<div class="card">
+<h2>ITI Courses</h2>
+<p><b>Eligibility:</b> 10th Pass</p>
+<p><b>Duration:</b> 1-2 Years</p>
+<p><b>Career:</b> Technician</p>
+</div>
+
+<div class="card">
+<h2>Agriculture</h2>
+<p><b>Eligibility:</b> 12th Science</p>
+<p><b>Duration:</b> 4 Years</p>
+<p><b>Career:</b> Agriculture Officer</p>
+</div>
+
+<div class="card">
+<h2>Nursing</h2>
+<p><b>Eligibility:</b> 12th PCB</p>
+<p><b>Duration:</b> 4 Years</p>
+<p><b>Career:</b> Nurse</p>
+</div>
+
+</div>
+
+<h1>🎓 All India Student Course Portal</h1>
+<p>10th | 12th | Graduation | Post Graduation Courses</p>
+</header>
+
+<div class="search">
+<input type="text" id="searchBox" placeholder="Search Course...">
+</div>
+
+<div class="container" id="courseContainer">
+
+<div class="card">
+<h2>📘 After 10th Courses</h2>
+<ul>
+<li>Polytechnic Diploma</li>
+<li>ITI Electrician</li>
+<li>ITI Fitter</li>
+<li>Computer Hardware</li>
+<li>Web Designing</li>
+<li>Hotel Management</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>🔬 12th Science</h2>
+<ul>
+<li>MBBS</li>
+<li>BDS</li>
+<li>BAMS</li>
+<li>BHMS</li>
+<li>B.Tech</li>
+<li>B.Pharm</li>
+<li>B.Sc</li>
+<li>Nursing</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>💼 12th Commerce</h2>
+<ul>
+<li>B.Com</li>
+<li>BBA</li>
+<li>CA</li>
+<li>CS</li>
+<li>CMA</li>
+<li>Banking Courses</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>🎨 12th Arts</h2>
+<ul>
+<li>BA</li>
+<li>Journalism</li>
+<li>Mass Communication</li>
+<li>Fashion Design</li>
+<li>Animation</li>
+<li>LLB</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>🎓 Graduation Courses</h2>
+<ul>
+<li>BA</li>
+<li>B.Com</li>
+<li>B.Sc</li>
+<li>BCA</li>
+<li>BBA</li>
+<li>B.Tech</li>
+<li>LLB</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>🏆 Post Graduation</h2>
+<ul>
+<li>MBA</li>
+<li>MCA</li>
+<li>M.Tech</li>
+<li>M.Sc</li>
+<li>M.Com</li>
+<li>MA</li>
+<li>LLM</li>
+<li>PGDM</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>🧑‍💻 Computer Courses</h2>
+<ul>
+<li>Tally</li>
+<li>CCC</li>
+<li>DCA</li>
+<li>ADCA</li>
+<li>Python</li>
+<li>Java</li>
+<li>Web Development</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>🏛 Government Exams</h2>
+<ul>
+<li>UPSC</li>
+<li>MPSC</li>
+<li>SSC CGL</li>
+<li>Bank PO</li>
+<li>Railway</li>
+<li>Police Bharti</li>
+</ul>
+</div>
+
+</div>
+
+<footer>
+© 2026 Student Course Eligibility Portal
+</footer>
+
+<script>
+const searchInput=document.getElementById("searchInput");
+searchInput.addEventListener("keyup",function(){
+let filter=this.value.toLowerCase();
+let cards=document.querySelectorAll(".card");
+
+cards.forEach(card=>{
+let text=card.innerText.toLowerCase();
+
+if(text.includes(filter)){
+card.style.display="block";
+}else{
+card.style.display="none";
+}
+});
+});
+</script>
+
+</body>
+</html>

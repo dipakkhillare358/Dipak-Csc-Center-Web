@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dipak CSC Center Portal</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#1e3a8a,#06b6d4);
+    min-height:100vh;
+    color:#fff;
+}
+
+/* Header */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 5%;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(15px);
+    position:sticky;
+    top:0;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo img{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+}
+
+.logo h2{
+    font-size:28px;
+}
+
+.search-box{
+    display:flex;
+    width:350px;
+}
+
+.search-box input{
+    flex:1;
+    padding:12px;
+    border:none;
+    outline:none;
+    border-radius:30px 0 0 30px;
+}
+
+.search-box button{
+    width:60px;
+    border:none;
+    background:#06b6d4;
+    color:white;
+    border-radius:0 30px 30px 0;
+    cursor:pointer;
+}
+
+.btn{
+    padding:10px 18px;
+    background:#06b6d4;
+    color:white;
+    text-decoration:none;
+    border-radius:25px;
+    margin-left:10px;
+}
+
+/* Hero */
+.hero{
+    text-align:center;
+    padding:80px 20px;
+}
+
+.hero h1{
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:20px;
+    max-width:700px;
+    margin:auto;
+}
+
+.hero-buttons{
+    margin-top:25px;
+}
+
+.hero-buttons a{
+    display:inline-block;
+    padding:12px 25px;
+    background:#06b6d4;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    margin:10px;
+}
+
+/* Services */
+.services{
+    width:90%;
+    margin:40px auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(15px);
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card i{
+    font-size:50px;
+    margin-bottom:15px;
+    color:#06b6d4;
+}
+
+.card a{
+    display:inline-block;
+    margin-top:15px;
+    text-decoration:none;
+    background:#06b6d4;
+    color:white;
+    padding:10px 20px;
+    border-radius:25px;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    margin-top:40px;
+}
+
+@media(max-width:768px){
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .search-box{
+        width:100%;
+    }
+
+    .hero h1{
+        font-size:35px;
+    }
+}
+.footer{
+    background:#041c4a;
+    color:white;
+    margin-top:60px;
+    padding-top:40px;
+}
+
+.footer-container{
+    width:90%;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.footer-box h3{
+    color:#00d4ff;
+    margin-bottom:15px;
+}
+
+.footer-box p{
+    line-height:1.8;
+    color:#ddd;
+}
+
+.footer-box a{
+    display:block;
+    color:#ddd;
+    text-decoration:none;
+    margin:10px 0;
+    transition:.3s;
+}
+
+.footer-box a:hover{
+    color:#00d4ff;
+    padding-left:8px;
+}
+
+.social-icons{
+    text-align:center;
+    margin-top:25px;
+}
+
+.social-icons a{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    width:45px;
+    height:45px;
+    margin:0 8px;
+    border-radius:50%;
+    background:#00d4ff;
+    color:white;
+    font-size:20px;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.social-icons a:hover{
+    transform:translateY(-5px);
+    background:white;
+    color:#041c4a;
+}
+
+.footer-bottom{
+    text-align:center;
+    margin-top:25px;
+    padding:15px;
+    border-top:1px solid rgba(255,255,255,0.2);
+    font-size:15px;
+    color:#ccc;
+}
+.notice-board{
+    width:90%;
+    margin:30px auto;
+    border-radius:20px;
+    overflow:hidden;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(12px);
+    box-shadow:0 8px 25px rgba(0,0,0,0.2);
+}
+
+.notice-header{
+    background:linear-gradient(90deg,#ff6b00,#ff9800);
+    color:white;
+    padding:15px;
+    font-size:24px;
+    font-weight:bold;
+    text-align:center;
+}
+
+.notice-content{
+    padding:20px;
+}
+
+.notice-content p{
+    font-size:18px;
+    color:white;
+    padding:10px 0;
+}
+
+.notice-content hr{
+    border:none;
+    height:1px;
+    background:rgba(255,255,255,0.2);
+}
+</style>
+</head>
+<body>
+
+<header>
+
+<div class="logo">
+    <img src="logo.png" alt="Logo">
+    <h2>Dips Portal</h2>
+</div>
+
+<div class="search-box">
+    <input type="text" placeholder="सेवा शोधा...">
+    <button><i class="fas fa-search"></i></button>
+</div>
+
+<div>
+    <a href="profile.html" class="btn">Profile</a>
+    <a href="login.html" class="btn">Login</a>
+</div>
+
+</header>
+<section class="notice-board">
+
+    <div class="notice-header">
+        📢 नवीन अपडेट्स / सूचना
+    </div>
+
+    <div class="notice-content">
+
+        <marquee direction="up" scrollamount="3" height="250">
+
+            <p>🔔 स्वाधार योजनेचे अर्ज सुरू झाले आहेत.</p>
+            <hr>
+
+            <p>🎓 नवीन शिष्यवृत्ती अर्ज उपलब्ध.</p>
+            <hr>
+
+            <p>📜 उत्पन्न प्रमाणपत्र सेवा लवकरच सुरू होणार.</p>
+            <hr>
+
+            <p>💼 नवीन सरकारी भरती माहिती अपडेट.</p>
+            <hr>
+
+            <p>🌾 शेतकरी योजना अर्ज सुरू.</p>
+            <hr>
+
+            <p>📢 CSC Portal Version 2.0 Launch.</p>
+
+        </marquee>
+
+    </div>
+
+</section>
+
+<section class="hero">
+    <h1>🙏 स्वागत आहे</h1>
+
+    <p>
+        विद्यार्थी, शेतकरी, नोकरी, शिष्यवृत्ती,
+        सरकारी योजना आणि प्रमाणपत्र सेवा
+        एकाच ठिकाणी.
+    </p>
+
+    <div class="hero-buttons">
+        <a href="StudentDashboard.html">विद्यार्थी सेवा</a>
+        <a href="Farmer.html">शेतकरी सेवा</a>
+        <a href="Job.html">नोकरी सेवा</a>
+    </div>
+</section>
+
+<section class="services">
+
+<div class="card">
+    <i class="fas fa-file-signature"></i>
+    <h3>शपथपत्र</h3>
+    <a href="decleration.html">Open</a>
+</div>
+
+<div class="card">
+    <i class="fas fa-file-alt"></i>
+    <h3>स्वाधार योजना</h3>
+    <a href="SowdharYojna.html">Open</a>
+</div>
+
+<div class="card">
+    <i class="fas fa-user-graduate"></i>
+    <h3>विद्यार्थी सेवा</h3>
+    <a href="StudentDashboard.html">Open</a>
+</div>
+
+<div class="card">
+    <i class="fas fa-tractor"></i>
+    <h3>शेतकरी सेवा</h3>
+    <a href="Farmer.html">Open</a>
+</div>
+
+<div class="card">
+    <i class="fas fa-briefcase"></i>
+    <h3>नोकरी सेवा</h3>
+    <a href="Job.html">Open</a>
+</div>
+
+<div class="card">
+    <i class="fas fa-landmark"></i>
+    <h3>सरकारी योजना</h3>
+    <a href="SarkariYojana.html">Open</a>
+</div>
+  <div class="card">
+        <i class="fas fa-comments"></i>
+        <h3>अभिप्राय / तक्रार</h3>
+        <a href="https://forms.gle/JFCMnLKbXKQLmERm6" target="_blank"> Open</a>
+    </div>
+</section>
+
+<footer>
+© 2026 Developer By Dipak Khillare
+</footer>
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-box">
+            <h3>🏢 Dipak CSC Center</h3>
+            <p>
+                सर्व शासकीय सेवा, प्रमाणपत्र,
+                शिष्यवृत्ती, नोकरी व शेतकरी सेवा
+                एकाच ठिकाणी उपलब्ध.
+            </p>
+        </div>
+
+        <div class="footer-box">
+            <h3>🔗 Quick Links</h3>
+
+            <a href="index.html">🏠 Home</a>
+            <a href="StudentDashboard.html">🎓 विद्यार्थी</a>
+            <a href="Farmer.html">🌾 शेतकरी</a>
+            <a href="Job.html">💼 नोकरी</a>
+        </div>
+
+        <div class="footer-box">
+            <h3>📞 Contact Us</h3>
+
+            <p>📱 +91 9359563098</p>
+            <p>📧 dipakcsccenter1@gmail.com</p>
+            <p>📍 दाभा, महाराष्ट्र</p>
+        </div>
+
+    </div>
+
+    <div class="social-icons">
+
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+        <a href="#"><i class="fab fa-instagram"></i></a>
+
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+
+        <a href="#"><i class="fab fa-youtube"></i></a>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 Dipak CSC Center Portal | Designed By Dipak Khillare
+    </div>
+
+</footer>
+
+</body>
+</html>

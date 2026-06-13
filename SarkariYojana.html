@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>सरकारी योजना पोर्टल</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f4f7fc;
+}
+
+/* HEADER */
+
+header{
+background:linear-gradient(135deg,#0052a3,#0077ff);
+color:white;
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+}
+
+.nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-weight:600;
+}
+
+/* HERO */
+
+.hero{
+padding:80px 20px;
+text-align:center;
+background:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),
+url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1400&q=80');
+background-size:cover;
+background-position:center;
+color:white;
+}
+
+.hero h1{
+font-size:50px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:25px;
+}
+
+.search{
+max-width:700px;
+margin:auto;
+display:flex;
+background:white;
+border-radius:50px;
+overflow:hidden;
+}
+
+.search input{
+flex:1;
+padding:15px;
+border:none;
+outline:none;
+font-size:16px;
+}
+
+.search button{
+padding:15px 25px;
+border:none;
+background:#ff9800;
+color:white;
+font-size:18px;
+cursor:pointer;
+}
+
+/* CATEGORY */
+
+.section{
+padding:60px 5%;
+}
+
+.title{
+text-align:center;
+font-size:35px;
+margin-bottom:40px;
+color:#003366;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,.1);
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card i{
+font-size:50px;
+color:#0052a3;
+margin-bottom:15px;
+}
+
+.card h3{
+margin-bottom:10px;
+color:#003366;
+}
+
+.card p{
+color:#555;
+margin-bottom:20px;
+}
+
+.btn{
+display:inline-block;
+padding:12px 25px;
+border-radius:50px;
+background:linear-gradient(45deg,#ff512f,#dd2476);
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* FOOTER */
+
+footer{
+background:#003366;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:50px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">🏛 सरकारी योजना पोर्टल</div>
+
+<div class="nav">
+<a href="index.html">Home</a>
+<a href="#">योजना</a>
+<a href="profile.html">Contact</a>
+</div>
+</header>
+
+<section class="hero">
+
+<h1>महाराष्ट्र व भारत सरकार योजना पोर्टल</h1>
+
+<p>सर्व सरकारी योजना एका ठिकाणी</p>
+
+<div class="search">
+<input type="text" placeholder="योजना शोधा...">
+<button><i class="fa fa-search"></i></button>
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="title">योजना विभाग</h2>
+
+<div class="grid">
+
+<div class="card">
+<i class="fas fa-graduation-cap"></i>
+<h3>विद्यार्थी योजना</h3>
+<p>शिष्यवृत्ती, स्वाधार, फी परतावा इ.</p>
+<a href="StudentDashboard.html" class="btn">View</a>
+</div>
+
+<div class="card">
+<i class="fas fa-tractor"></i>
+<h3>शेतकरी योजना</h3>
+<p>पीएम किसान, नमो शेतकरी, सिंचन इ.</p>
+<a href="farmer.html" class="btn">View</a>
+</div>
+
+<div class="card">
+<i class="fas fa-female"></i>
+<h3>महिला योजना</h3>
+<p>लाडकी बहीण, सुकन्या समृद्धी इ.</p>
+<a href="women.html" class="btn">View</a>
+</div>
+
+<div class="card">
+<i class="fas fa-home"></i>
+<h3>घरकुल योजना</h3>
+<p>PMAY, रमाई, शबरी घरकुल</p>
+<a href="house.html" class="btn">View</a>
+</div>
+
+<div class="card">
+<i class="fas fa-briefcase"></i>
+<h3>रोजगार योजना</h3>
+<p>PMEGP, मुद्रा लोन, Startup</p>
+<a href="jobs.html" class="btn">View</a>
+</div>
+
+<div class="card">
+<i class="fas fa-heartbeat"></i>
+<h3>आरोग्य योजना</h3>
+<p>आयुष्मान भारत, जनआरोग्य</p>
+<a href="health.html" class="btn">View</a>
+</div>
+
+<div class="card">
+<i class="fas fa-user-shield"></i>
+<h3>सामाजिक सुरक्षा</h3>
+<p>वृद्धापकाळ, निराधार, पेन्शन</p>
+<a href="social.html" class="btn">View</a>
+</div>
+
+<div class="card">
+<i class="fas fa-store"></i>
+<h3>व्यवसाय योजना</h3>
+<p>MSME, PM Vishwakarma</p>
+<a href="business.html" class="btn">View</a>
+</div>
+
+<div class="card">
+<i class="fas fa-file-alt"></i>
+<h3>प्रमाणपत्र सेवा</h3>
+<p>जात, उत्पन्न, रहिवासी इ.</p>
+<a href="certificate.html" class="btn">View</a>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Government Scheme Portal | Developed By Dipak Khillare
+</footer>
+
+</body>
+</html>

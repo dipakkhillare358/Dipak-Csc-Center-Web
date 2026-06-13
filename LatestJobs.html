@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dipak Job Portal</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f2f2f2;
+}
+
+/* Header */
+.header{
+background:#d40000;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+.header h1{
+font-size:42px;
+font-weight:bold;
+}
+
+.header p{
+font-size:16px;
+}
+
+/* Navbar */
+.navbar{
+background:#001b75;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.navbar a{
+color:white;
+padding:12px 18px;
+text-decoration:none;
+font-size:14px;
+font-weight:bold;
+border-right:1px solid rgba(255,255,255,.2);
+}
+
+.navbar a:hover{
+background:#0033cc;
+}
+
+/* Marquee */
+.news{
+background:#fff;
+padding:8px;
+text-align:center;
+font-size:14px;
+font-weight:bold;
+}
+
+marquee{
+color:red;
+}
+
+/* Quick Buttons */
+.quick-links{
+max-width:1200px;
+margin:15px auto;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:5px;
+}
+
+.quick-links a{
+text-decoration:none;
+color:white;
+padding:15px;
+font-weight:bold;
+text-align:center;
+font-size:14px;
+}
+
+.red{background:#ff3300;}
+.orange{background:#ff6600;}
+.purple{background:#9900ff;}
+.blue{background:#0066ff;}
+.green{background:#008000;}
+.brown{background:#8B4513;}
+.pink{background:#ff1493;}
+.teal{background:#008080;}
+
+/* Main Section */
+.main{
+max-width:1200px;
+margin:20px auto;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:15px;
+}
+
+/* Cards */
+.card{
+background:white;
+border:2px solid #d40000;
+}
+
+.card h2{
+background:#d40000;
+color:white;
+text-align:center;
+padding:10px;
+font-size:22px;
+}
+
+.card ul{
+padding:15px 25px;
+}
+
+.card ul li{
+margin-bottom:10px;
+}
+
+.card ul li a{
+color:#0000cc;
+font-size:14px;
+text-decoration:none;
+}
+
+.card ul li a:hover{
+text-decoration:underline;
+}
+
+.view-btn{
+display:block;
+width:120px;
+margin:15px auto;
+text-align:center;
+background:#0066ff;
+color:white;
+padding:10px;
+border-radius:20px;
+text-decoration:none;
+}
+
+/* WhatsApp Button */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+
+/* Mobile */
+@media(max-width:900px){
+
+.quick-links{
+grid-template-columns:repeat(2,1fr);
+}
+
+.main{
+grid-template-columns:1fr;
+}
+
+.header h1{
+font-size:30px;
+}
+.nav-buttons{
+    display:flex;
+    gap:10px;
+    padding:15px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.back-btn,
+.home-btn{
+    border:none;
+    padding:12px 25px;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.back-btn{
+    background:#ff6600;
+}
+
+.home-btn{
+    background:#0066ff;
+}
+
+.back-btn:hover{
+    background:#e65c00;
+}
+
+.home-btn:hover{
+    background:#0052cc;
+}
+}
+/* Top Right Buttons */
+.top-buttons{
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 9999;
+}
+
+.nav-btn{
+    border: none;
+    padding: 12px 22px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+}
+
+.back-btn{
+    background: linear-gradient(135deg,#ff512f,#dd2476);
+}
+
+.home-btn{
+    background: linear-gradient(135deg,#00c853,#00e676);
+}
+
+.nav-btn:hover{
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+
+.nav-btn:active{
+    transform: scale(0.95);
+}
+
+/* Mobile Responsive */
+@media(max-width:768px){
+    .nav-btn{
+        padding:10px 16px;
+        font-size:14px;
+    }
+
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+<h1>SARKARI RESULT™</h1>
+<p>Dipak CSC Center Job Portal</p>
+</div>
+<div class="nav-buttons">
+    <button onclick="history.back()" class="back-btn">⬅ Back</button>
+
+    <button onclick="window.location.href='index.html'" class="home-btn">
+        🏠 Home
+    </button>
+<!-- Top Right Buttons -->
+<div class="top-buttons">
+    <button class="nav-btn back-btn" onclick="history.back()">
+        ⬅ Back
+    </button>
+
+    <button class="nav-btn home-btn" onclick="window.location.href='index.html'">
+        🏠 Home
+    </button>
+</div>
+</div>
+
+
+<div class="navbar">
+<a href="index.html">Home</a>
+<a href="#">Latest Job</a>
+<a href="#">Admit Card</a>
+<a href="#">Result</a>
+<a href="#">Admission</a>
+<a href="#">Syllabus</a>
+<a href="#">Answer Key</a>
+<a href="#">Contact</a>
+</div>
+
+<div class="news">
+<marquee>
+🔥 SSC CGL Recruitment 2026 | Railway Group D Form | Police Bharti | Bank Jobs | MPSC Updates | Admit Card | Latest Results
+</marquee>
+</div>
+
+<div class="quick-links">
+<a href="#" class="red">SSC CGL Form 2026</a>
+<a href="#" class="orange">Daily Current Affairs</a>
+<a href="#" class="purple">RRB ALP Recruitment</a>
+<a href="#" class="blue">UPSSSC PET 2026</a>
+
+<a href="#" class="green">CTET Online Form</a>
+<a href="#" class="brown">RRB Technician</a>
+<a href="#" class="pink">Excise Constable</a>
+<a href="#" class="teal">BPSSC SI Form</a>
+</div>
+
+<div class="main">
+
+<div class="card">
+<h2>Results</h2>
+<ul>
+<li><a href="#">SSC GD Result 2026</a></li>
+<li><a href="#">SSC CHSL Result 2026</a></li>
+<li><a href="#">MPSC Result 2026</a></li>
+<li><a href="#">Police Bharti Result</a></li>
+<li><a href="#">Railway Result 2026</a></li>
+<li><a href="#">Bank Clerk Result</a></li>
+<li><a href="#">UPSC Result</a></li>
+<li><a href="#">Forest Guard Result</a></li>
+</ul>
+<a href="#" class="view-btn">View More</a>
+</div>
+
+<div class="card">
+<h2>Admit Card</h2>
+<ul>
+<li><a href="#">SSC CHSL Admit Card</a></li>
+<li><a href="#">SSC CGL Hall Ticket</a></li>
+<li><a href="#">MPSC Admit Card</a></li>
+<li><a href="#">Police Hall Ticket</a></li>
+<li><a href="#">Railway Admit Card</a></li>
+<li><a href="#">Bank Exam Call Letter</a></li>
+<li><a href="#">UPSC Admit Card</a></li>
+<li><a href="#">CTET Hall Ticket</a></li>
+</ul>
+<a href="#" class="view-btn">View More</a>
+</div>
+
+<div class="card">
+<h2>Latest Jobs</h2>
+<ul>
+<li><a href="#">SSC CGL Recruitment 2026</a></li>
+<li><a href="#">SSC CHSL Vacancy</a></li>
+<li><a href="#">Police Bharti 2026</a></li>
+<li><a href="#">Railway Group D Form</a></li>
+<li><a href="#">Bank Clerk Recruitment</a></li>
+<li><a href="#">UPSC Online Form</a></li>
+<li><a href="#">Forest Department Bharti</a></li>
+<li><a href="#">Gram Sevak Recruitment</a></li>
+</ul>
+<a href="#" class="view-btn">View More</a>
+</div>
+
+</div>
+
+<a href="https://wa.me/919175927013" class="whatsapp">
+📞 CSC Contact
+</a>
+
+</body>
+</html>
